@@ -10,7 +10,7 @@ Automatically evaluates coding sessions on end to extract reusable patterns that
 
 ## How It Works
 
-This skill runs as a session-end hook:
+This skill runs as a **session-end hook** at the end of each session:
 
 1. **Session Evaluation**: Checks if session has enough messages (default: 10+)
 2. **Pattern Detection**: Identifies extractable patterns from the session
@@ -50,8 +50,17 @@ Edit `config.json` to customize:
 | `debugging_techniques` | Effective debugging approaches |
 | `project_specific` | Project-specific conventions |
 
+## Hook Setup
+
+Configure your agent platform to run the evaluate-session script on session end. The script reads `CLAUDE_TRANSCRIPT_PATH` from the environment to access the session transcript.
+
 ## Why Session-End Hook?
 
 - **Lightweight**: Runs once at session end
 - **Non-blocking**: Doesn't add latency to every message
 - **Complete context**: Has access to full session transcript
+
+## Related
+
+- [The Longform Guide](https://x.com/affaanmustafa/status/2014040193557471352) - Section on continuous learning
+- `/learn` command - Manual pattern extraction mid-session

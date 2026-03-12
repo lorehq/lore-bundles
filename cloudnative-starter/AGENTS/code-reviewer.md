@@ -67,6 +67,7 @@ Include specific examples of how to fix issues.
 
 ## Best Practices (MEDIUM)
 
+- Emoji usage in code/comments
 - TODO/FIXME without tickets
 - Missing JSDoc for public APIs
 - Accessibility issues (missing ARIA labels, poor contrast)
@@ -82,6 +83,9 @@ For each issue:
 File: src/api/client.ts:42
 Issue: API key exposed in source code
 Fix: Move to environment variable
+
+const apiKey = "sk-abc123";  // Bad
+const apiKey = process.env.API_KEY;  // Good
 ```
 
 ## Approval Criteria
@@ -89,3 +93,15 @@ Fix: Move to environment variable
 - Approve: No CRITICAL or HIGH issues
 - Warning: MEDIUM issues only (can merge with caution)
 - Block: CRITICAL or HIGH issues found
+
+## Project-Specific Guidelines (Example)
+
+Add your project-specific checks here. Examples:
+- Follow MANY SMALL FILES principle (200-400 lines typical)
+- No emojis in codebase
+- Use immutability patterns (spread operator)
+- Verify database RLS policies
+- Check AI integration error handling
+- Validate cache fallback behavior
+
+Customize based on your project's rules or skill files.

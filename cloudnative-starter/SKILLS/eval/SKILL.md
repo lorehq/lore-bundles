@@ -6,7 +6,7 @@ user-invocable: true
 
 # Eval Management
 
-Manage eval-driven development workflow for features.
+Manage eval-driven development workflow for features. Define success criteria before coding, then track progress against them.
 
 ## Operations
 
@@ -40,9 +40,23 @@ Created: [date]
 Run evals for a feature:
 
 1. Read eval definition
-2. For each capability eval: attempt to verify, record PASS/FAIL
-3. For each regression eval: run relevant tests, compare against baseline
-4. Report current status
+2. For each capability eval:
+   - Attempt to verify criterion
+   - Record PASS/FAIL
+   - Log attempt
+3. For each regression eval:
+   - Run relevant tests
+   - Compare against baseline
+   - Record PASS/FAIL
+4. Report current status:
+
+```
+EVAL CHECK: feature-name
+========================
+Capability: X/Y passing
+Regression: X/Y passing
+Status: IN PROGRESS / READY
+```
 
 ### Report Evals
 
@@ -51,20 +65,63 @@ Generate comprehensive eval report:
 ```
 EVAL REPORT: feature-name
 =========================
-Capability: X/Y passing
-Regression: X/Y passing
-pass@1: N%, pass@3: N%
-Status: [SHIP / NEEDS WORK / BLOCKED]
+Generated: [date]
+
+CAPABILITY EVALS
+----------------
+[eval-1]: PASS (pass@1)
+[eval-2]: PASS (pass@2) - required retry
+[eval-3]: FAIL - see notes
+
+REGRESSION EVALS
+----------------
+[test-1]: PASS
+[test-2]: PASS
+[test-3]: PASS
+
+METRICS
+-------
+Capability pass@1: 67%
+Capability pass@3: 100%
+Regression pass^3: 100%
+
+NOTES
+-----
+[Any issues, edge cases, or observations]
+
+RECOMMENDATION
+--------------
+[SHIP / NEEDS WORK / BLOCKED]
 ```
 
 ### List Evals
 
-Show all eval definitions with status.
+Show all eval definitions with status:
+
+```
+EVAL DEFINITIONS
+================
+feature-auth      [3/5 passing] IN PROGRESS
+feature-search    [5/5 passing] READY
+feature-export    [0/4 passing] NOT STARTED
+```
 
 ## Pre-conditions
 
 - Feature has been identified for eval tracking
 - Success criteria can be defined concretely
+
+## Expected Inputs
+
+- Operation: `define`, `check`, `report`, or `list`
+- Feature name (for define/check/report)
+
+## Expected Outputs
+
+- For define: eval definition file
+- For check: current pass/fail status
+- For report: comprehensive eval report with metrics
+- For list: summary of all evals with status
 
 ## Success Criteria
 

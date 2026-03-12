@@ -70,6 +70,9 @@ Create detailed steps with:
    - Dependencies: None / Requires step X
    - Risk: Low/Medium/High
 
+2. **[Step Name]** (File: path/to/file.ts)
+   ...
+
 ### Phase 2: [Phase Name]
 ...
 
