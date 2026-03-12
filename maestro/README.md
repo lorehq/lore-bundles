@@ -7,7 +7,7 @@ A Lore bundle adapted from [ReinaMacCredy/maestro](https://github.com/ReinaMacCr
 - **10 agents** for orchestration, TDD, quick fixes, plan review, strategic advice, security review, progress reporting, and wisdom synthesis
 - **71 skills** covering orchestration workflows, language patterns (Go, Python, Swift, TypeScript, C++, Java, Django, Spring Boot), testing, security, infrastructure, frontend, API design, content creation, AI/ML, and meta-development tools
 - **29 rules** organized as 9 common rules plus 5 language-specific rules each for Go, Python, Swift, and TypeScript
-- **12 hooks** across 7 events: orchestration safety guards (pre-tool-use), enrichment and trace logging (post-tool-use), keyword mode detection (prompt-submit), context injection (session-start, subagent-start, pre-compact), worker persistence (stop)
+- **14 hooks** across 7 events: orchestration safety guards (pre-tool-use), enrichment and trace logging (post-tool-use), keyword mode detection (prompt-submit), context injection (session-start, subagent-start, pre-compact), worker persistence (stop)
 
 ## Changes From Source
 

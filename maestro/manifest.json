@@ -14,7 +14,9 @@
       { "name": "Error Detector", "script": "SCRIPTS/error-detector.mjs" },
       { "name": "Plan Validator", "script": "SCRIPTS/plan-validator.mjs" },
       { "name": "Wisdom Injector", "script": "SCRIPTS/wisdom-injector.mjs" },
-      { "name": "Trace Logger", "script": "SCRIPTS/trace-logger.mjs" }
+      { "name": "Trace Logger", "script": "SCRIPTS/trace-logger.mjs" },
+      { "name": "Remember Extractor", "script": "SCRIPTS/remember-extractor.mjs" },
+      { "name": "Bash History", "script": "SCRIPTS/bash-history.mjs" }
     ],
     "prompt-submit": [
       { "name": "Keyword Detector", "script": "SCRIPTS/keyword-detector.mjs" }
