@@ -1,33 +1,25 @@
 # Maestro
 
-A comprehensive development bundle with 70+ skills and 29 rules covering the full software development lifecycle.
+Multi-agent orchestration system for autonomous feature development. Design specs, execute plans, review results -- with parallel worker agents and a persistent wisdom loop.
 
-## Skill Categories
+## How It Works
 
-**Orchestration** -- setup, design, implement, review, status, new-track, revert, note, agents-guide
+Maestro uses a `.maestro/` workspace directory to manage plans, track progress, and accumulate knowledge across sessions.
 
-**Language Patterns** -- golang, python, swift, typescript, cpp, java, django, springboot
+**Design phase:** `/new-track` or `/design` runs an interactive interview to produce a spec and phased implementation plan.
 
-**Testing** -- tdd-workflow, e2e-testing, golang-testing, python-testing, django-tdd, springboot-tdd, cpp-testing, verification-loop, django-verification, springboot-verification
+**Implementation phase:** `/implement` executes the plan. Single-agent mode (default) works sequentially. Team mode (`/implement --team`) spawns an orchestrator that delegates to parallel workers: **kraken** (TDD specialist), **spark** (quick fixes), **build-fixer** (compile errors). The orchestrator verifies every result and cannot edit files directly.
 
-**Security** -- security-review, security-scan, django-security, springboot-security
+**Review phase:** `/review` runs post-implementation quality and security review.
 
-**Infrastructure** -- docker-patterns, deployment-patterns, database-migrations, postgres-patterns, clickhouse-io
+## Wisdom Loop
 
-**Frontend** -- frontend-patterns, frontend-slides, swiftui-patterns, liquid-glass-design
-
-**API & Backend** -- api-design, backend-patterns, jpa-patterns
-
-**Content & Research** -- article-writing, content-engine, market-research, investor-materials, investor-outreach, visa-doc-translate
-
-**AI/ML** -- cost-aware-llm-pipeline, foundation-models-on-device, eval-harness, iterative-retrieval, nutrient-document-processing, regex-vs-llm-structured-text
-
-**Meta** -- skill-creator, skill-stocktake, coding-standards, continuous-learning, autonomous-loops, strategic-compact, search-first, configure-ecc, project-guidelines-example, plankton-code-quality
-
-## Rules
-
-29 rules organized by language: common (9), golang (5), python (5), swift (5), typescript (5). Language-specific rules are scoped by file glob.
+Workers emit `<remember>` tags during execution. Hooks extract these into `.maestro/wisdom/` files. Next session, context hooks inject accumulated wisdom into the orchestrator and workers. Knowledge persists across sessions.
 
 ## Hooks
 
-Pre-tool-use and post-tool-use hooks for orchestration safety and verification reminders.
+14 hooks enforce safety and continuity: the orchestrator is blocked from editing files, workers are blocked from editing plans, workers are kept running until tasks complete, and context is injected at session start, subagent spawn, and pre-compaction.
+
+## Key Commands
+
+`/setup` -- initialize project workspace | `/new-track` -- quick spec + plan | `/design` -- deep discovery | `/implement` -- execute (add `--team` for parallel) | `/review` -- quality + security review | `/note` -- priority context | `/status` -- progress report
