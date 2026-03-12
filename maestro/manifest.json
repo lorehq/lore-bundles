@@ -6,11 +6,30 @@
   "description": "Comprehensive development bundle — 60+ skills covering language patterns, testing, security, API design, deployment, and orchestration workflows. Adapted from ReinaMacCredy/maestro.",
   "hooks": {
     "pre-tool-use": [
-      { "name": "Orchestrator Guard", "script": "SCRIPTS/orchestrator-guard.mjs" }
+      { "name": "Orchestrator Guard", "script": "SCRIPTS/orchestrator-guard.mjs" },
+      { "name": "Plan Protection", "script": "SCRIPTS/plan-protection.mjs" }
     ],
     "post-tool-use": [
       { "name": "Verification Injector", "script": "SCRIPTS/verification-injector.mjs" },
-      { "name": "Error Detector", "script": "SCRIPTS/error-detector.mjs" }
+      { "name": "Error Detector", "script": "SCRIPTS/error-detector.mjs" },
+      { "name": "Plan Validator", "script": "SCRIPTS/plan-validator.mjs" },
+      { "name": "Wisdom Injector", "script": "SCRIPTS/wisdom-injector.mjs" },
+      { "name": "Trace Logger", "script": "SCRIPTS/trace-logger.mjs" }
+    ],
+    "prompt-submit": [
+      { "name": "Keyword Detector", "script": "SCRIPTS/keyword-detector.mjs" }
+    ],
+    "session-start": [
+      { "name": "Maestro Context", "script": "SCRIPTS/session-start.mjs" }
+    ],
+    "subagent-start": [
+      { "name": "Worker Context", "script": "SCRIPTS/subagent-context.mjs" }
+    ],
+    "stop": [
+      { "name": "Worker Persistence", "script": "SCRIPTS/worker-persistence.mjs" }
+    ],
+    "pre-compact": [
+      { "name": "Plan Context", "script": "SCRIPTS/plan-context-injector.mjs" }
     ]
   }
 }

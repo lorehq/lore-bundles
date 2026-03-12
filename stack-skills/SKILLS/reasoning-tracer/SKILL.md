@@ -1,6 +1,13 @@
 ---
 name: reasoning-tracer
 description: Exposes reasoning chains as auditable, decomposable artifacts. Forces assumption inventories, decision branching, confidence decomposition, and weakest-link analysis instead of opaque conclusions. Use when the user needs to see WHY a conclusion was reached, what alternatives were considered, and where the reasoning is most fragile.
+argument-hint: "[question, decision, recommendation, or estimate to trace]"
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
+  - Agent
 user-invocable: true
 ---
 

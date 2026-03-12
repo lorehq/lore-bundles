@@ -1,6 +1,7 @@
 ---
 name: review
 description: "Code review for a track against its spec and plan. Verifies implementation matches requirements, checks code quality and security."
+argument-hint: "[<track-name>] [--current]"
 user-invocable: true
 ---
 

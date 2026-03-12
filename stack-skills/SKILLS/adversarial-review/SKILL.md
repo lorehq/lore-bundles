@@ -1,6 +1,13 @@
 ---
 name: adversarial-review
-description: Devil's Advocate stress-testing for code, architecture, PRs, and decisions. Surfaces hidden flaws through structured adversarial analysis with metacognitive depth. Use for high-stakes review, stress-testing choices, or when the user wants problems found deliberately.
+description: Devil's Advocate stress-testing for code, architecture, PRs, and decisions. Surfaces hidden flaws through structured adversarial analysis with metacognitive depth. Use for high-stakes review, stress-testing choices, or when the user wants problems found deliberately. NOT for routine code review (use engineering:code-review).
+argument-hint: "[code/decision/PR to stress-test]"
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
+  - Agent
 user-invocable: true
 ---
 

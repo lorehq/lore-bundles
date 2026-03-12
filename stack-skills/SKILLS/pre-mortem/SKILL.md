@@ -1,6 +1,13 @@
 ---
 name: pre-mortem
 description: Prospective failure analysis using Gary Klein's pre-mortem technique. Assumes complete failure, works backward to identify risks, leading indicators, and circuit breakers. Counters optimism bias by forcing systematic exploration of failure modes before they materialize. Use for project plans, architecture decisions, technology adoption, business strategy, or feature launches.
+argument-hint: "[plan, decision, or initiative to stress-test for future failure]"
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
+  - Agent
 user-invocable: true
 ---
 

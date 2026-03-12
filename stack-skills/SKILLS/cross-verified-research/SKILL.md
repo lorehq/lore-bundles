@@ -1,6 +1,15 @@
 ---
 name: cross-verified-research
 description: Deep research with cross-verification and source tiering. Use when investigating technologies, comparing tools, fact-checking claims, evaluating architectures, or any task requiring verified information.
+argument-hint: "[topic or question to research]"
+allowed-tools:
+  - WebSearch
+  - WebFetch
+  - Read
+  - Grep
+  - Glob
+  - Bash
+  - Agent
 user-invocable: true
 ---
 

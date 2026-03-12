@@ -1,6 +1,7 @@
 ---
 name: agents-guide
 description: "Generates AGENTS.md and CLAUDE.md files using the WHAT/WHY/HOW framework. Explores the codebase and produces minimal (<100 line) context files with progressive disclosure."
+argument-hint: "[--reset]"
 user-invocable: true
 ---
 

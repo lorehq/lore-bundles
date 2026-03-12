@@ -1,6 +1,7 @@
 ---
 name: design
 description: "Deep discovery and specification for ambitious features. Full BMAD-inspired interview with classification, vision, journeys, domain analysis, and FR synthesis. Same output contract (spec.md + plan.md) as new-track but far richer. Use for multi-component systems, regulated domains, or unclear requirements."
+argument-hint: "<track description>"
 user-invocable: true
 ---
 

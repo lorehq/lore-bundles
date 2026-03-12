@@ -1,6 +1,7 @@
 ---
 name: setup
 description: "Scaffolds project context (product, tech stack, coding guidelines, product guidelines, workflow) and initializes track registry. Use for first-time project onboarding."
+argument-hint: "[--reset]"
 user-invocable: true
 ---
 

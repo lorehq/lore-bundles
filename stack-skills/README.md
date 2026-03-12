@@ -20,8 +20,7 @@ Originally created by [@thestack_ai](https://github.com/whynowlab) as [whynowlab
 
 - Converted from Claude Code skill format to Lore bundle format
 - Skill directories moved from `skills/` (lowercase) to `SKILLS/` (uppercase per Lore convention)
-- Frontmatter cleaned: removed `triggers`, `argument-hint`, and `allowed-tools` (Claude Code-specific fields); added `user-invocable: true` (Lore standard)
-- Descriptions cleaned: removed embedded trigger keyword lists
+- Frontmatter: removed embedded trigger keyword lists from descriptions; added `user-invocable: true` (Lore standard); `argument-hint` and `allowed-tools` preserved as pass-through fields
 - Removed references to skills not included in this bundle (deep-dive-analyzer, skill-composer, orchestrator strategy team)
 - Skill body content preserved as-is -- no rewrites
 - Added `manifest.json` and `LORE.md` per Lore bundle standard

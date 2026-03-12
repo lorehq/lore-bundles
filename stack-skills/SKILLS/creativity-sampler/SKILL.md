@@ -1,6 +1,7 @@
 ---
 name: creativity-sampler
-description: Generate probability-weighted alternative options that challenge default thinking. Forces unconventional alternatives and exposes hidden assumptions behind the "obvious" choice. For decision-point analysis, NOT full design exploration.
+description: Generate probability-weighted alternative options that challenge default thinking. Forces unconventional alternatives and exposes hidden assumptions behind the "obvious" choice. For decision-point analysis, NOT full design exploration (use brainstorming for that).
+argument-hint: "[decision or question to explore]"
 user-invocable: true
 ---
 
