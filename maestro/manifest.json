@@ -1,0 +1,11 @@
+{
+  "manifest_version": 1,
+  "slug": "maestro",
+  "name": "Maestro",
+  "version": "1.0.0",
+  "description": "Comprehensive development bundle — 60+ skills covering language patterns, testing, security, API design, deployment, and orchestration workflows. Adapted from ReinaMacCredy/maestro.",
+  "hooks": {
+    "pre-tool-use": "HOOKS/pre-tool-use.mjs",
+    "post-tool-use": "HOOKS/post-tool-use.mjs"
+  }
+}

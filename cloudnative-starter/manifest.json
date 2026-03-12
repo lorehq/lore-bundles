@@ -1,0 +1,13 @@
+{
+  "manifest_version": 1,
+  "slug": "cloudnative-starter",
+  "name": "CloudNative Starter",
+  "version": "1.1.0",
+  "description": "Comprehensive development bundle — code review, TDD, architecture, security, build resolution, and workflow orchestration. Adapted from cloudnative-co/claude-code-starter-kit.",
+  "hooks": {
+    "pre-tool-use": "HOOKS/pre-tool-use.mjs",
+    "post-tool-use": "HOOKS/post-tool-use.mjs",
+    "pre-compact": "HOOKS/pre-compact.mjs",
+    "stop": "HOOKS/stop.mjs"
+  }
+}
