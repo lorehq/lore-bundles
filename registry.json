@@ -44,6 +44,22 @@
       "source": "https://github.com/ascode-com/ascode-co.dev-discipline",
       "author": "lorehq",
       "tags": ["git", "workflow", "discipline", "community"]
+    },
+    {
+      "slug": "agentbox",
+      "name": "AgentBox",
+      "description": "Client-side orchestrator for dispatching tasks to cloud agent VMs — delegation policy, cost awareness, and PR review workflow",
+      "repo": "https://github.com/lorehq/agentbox.git",
+      "author": "lorehq",
+      "tags": ["cloud-agents", "orchestration", "delegation", "official"]
+    },
+    {
+      "slug": "agentbox-worker",
+      "name": "AgentBox Worker",
+      "description": "Autonomous VM worker — computer-use, visual verification, video recording, and PR submission from inside an isolated VM",
+      "repo": "https://github.com/lorehq/agentbox-worker.git",
+      "author": "lorehq",
+      "tags": ["cloud-agents", "computer-use", "vm", "official"]
     }
   ]
 }
